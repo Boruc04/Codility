@@ -16,11 +16,12 @@ class Solution {
             if(value <= 0) continue;
             sortedA[value] = true;     
         }
-
-        for (int j = 1; j < sortedA.Length; j++){
-            if (sortedA[j] == false) return j;
+        if (sortedA.Length != 0){
+            for (int j = 1; j < sortedA.Length; j++){
+                if (sortedA[j] == false) return j;
+            }
         }
-
+        
         return 1;
     }
 }
